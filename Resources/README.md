@@ -65,34 +65,9 @@ Options:
             Go: Punish
 ```
 </br>
-## 进阶版
-</br>
-```
-Contents: 开始之前，先重新认识一下，他们喜欢叫我"Master System"，但如果你 {{ .Name }} 识相的话应该知道怎么叫我吧 {{ .Mission }} 让我听听你的声音
-Options: 
-  Option-1: 
-    Contents: 是的主人 （需要录音权限）
-    Action: 
-      Go: Recording	#执行操作,参考GO功能表
-      Contents: 主人
-      yes: 
-        Go: Next
-      no: 
-        Go: Dialogue
-        Contents: 哇哦，看来我们的小可爱还是不愿开口呢，看来需要调教一下才行
-        Options: 
-          Option-1: 
-            Contents: （认命，接受惩罚）
-            Action: 
-              Go: Punish
-  Option-2: 
-    Contents: 我不认你做我的主人
-    Action: 
-      Go: Punish
-```
-</br>
 其中 {{.Mission}} 为任务 {{.Name}} 为用户名</br>
 文件为YML文件一条对话占用一个YML文件</br>
+Go后可执行的操作详见GO功能表，以及我事先写的一些示例，相信聪明的~~M~~们一下就能看懂
 各位笔下留情，不要写太过于暴露（参考已经被封了的Wearable Technology，谁也不希望这个仓库被封⑧）或者太难完成的任务（注意身体）</br>
 # 变量表
 待完善
