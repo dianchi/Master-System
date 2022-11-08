@@ -1,0 +1,21 @@
+Contents: 开始之前，先重新认识一下，他们喜欢叫我"Master System"，但如果你识相的话应该知道怎么叫我吧 {{.Mission}} 
+Options:
+  Option-1: 
+    Contents: 是的主人 （需要录音权限）
+    Action: 
+      Go: Recording
+        Contents: 主人
+        ifis:
+          Go: Next
+        else:
+          Go: Dialogue
+          Contents: 哇哦，看来我们的小可爱还是不愿开口呢，看来需要调教一下才行
+          Options:
+            Option-1:
+              Contents: （认命，接受惩罚）
+              Action:
+                Go: Punish
+	Option-2: 
+    Contents: 我不认你做我的主人
+    Action:
+      Go: Punish

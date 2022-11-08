@@ -1,7 +1,7 @@
 # 目录结构
  Dialogue 对话</br>
-	Hello.html</br>
-	Punish-1.html</br>
+	Hello.yml</br>
+	Punish-1.yml</br>
  Missions 任务</br>
 	Easy	简单</br>
 		XXX-Missions.yml</br>
@@ -34,9 +34,17 @@ Punish:
 ```
 # 对话编写
 请您使用如下格式编写剧情对话</br>
-恭喜你抽到了 {{.Mission}} 的任务，我亲爱的奴隶 {{.Name}}</br>
+```
+Contents: 恭喜你抽到了 {{.Mission}} 的任务，我亲爱的奴隶 {{.Name}}
+Options： #对话选项
+	Option-1: 是的主人
+	Option-2: 去一边去，我不认你做我的主人
+	Option-3: 虽然但是，你是谁
+	...
+```
+</br>
 其中 {{.Mission}} 为任务 {{.Name}} 为用户名</br>
-文件为Html文件，可以适当引入Html标签和Css美化（但我不保证被解析出来会不会炸，所以最好别写太华丽吧）一条对话占用一个Html文件</br>
+文件为YML文件一条对话占用一个YML文件</br>
 各位笔下留情，不要写太过于暴露（参考已经被封了的Wearable Technology，谁也不希望这个仓库被封⑧）或者太难完成的任务（注意身体）</br>
 #变量表
 待完善
