@@ -66,6 +66,7 @@ Options:
 ```
 </br>
 ## 进阶版
+</br>
 ```
 Contents: 开始之前，先重新认识一下，他们喜欢叫我"Master System"，但如果你 {{ .Name }} 识相的话应该知道怎么叫我吧 {{ .Mission }} 让我听听你的声音
 Options: 
@@ -88,7 +89,6 @@ Options:
     Contents: 我不认你做我的主人
     Action: 
       Go: Punish
-
 ```
 </br>
 其中 {{.Mission}} 为任务 {{.Name}} 为用户名</br>
