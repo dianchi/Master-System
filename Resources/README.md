@@ -5,8 +5,8 @@
 
 >Missions 任务</br>
 >>Easy	简单</br>
->>>XXX-Missions.yml</br>
->>>XXX-Missions.yml</br>
+>>>XXX-Mission.yml</br>
+>>>XXX-Mission.yml</br>
 
 >>Normal	普通</br>
 >>Hard	困难</br>
