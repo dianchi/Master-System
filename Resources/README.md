@@ -1,20 +1,20 @@
 # 目录结构
- Dialogue 对话</br>
-	Hello.html</br>
-	Punish-1.html</br>
- Missions 任务</br>
-	Easy	简单</br>
-		XXX-Missions.yml</br>
-		XXX-Missions.yml</br>
-	Normal	普通</br>
-	Hard	困难</br>
-	Impossible	王の不可能完成の任务</br>
-	Punish	惩罚任务（如果完不成主人给的任务，~~就撅好屁股挨罚吧~~）</br>
-		XXX-Punish.yml
- Pictures 图片资源</br>
-	Illustrations 二次元插图（虽然不可能有，不要直接传PNG这样的图，真的会被封，请编码成Base64之后传TXT格式，十分感谢各位Hero）</br>
-	Static 固定UI图片
-#特别注意
+>Dialogue 对话</br>
+>>Hello.yml</br>
+>>Punish-1.yml</br>
+>Missions 任务</br>
+>>Easy	简单</br>
+>>>XXX-Missions.yml</br>
+>>>XXX-Missions.yml</br>
+>>Normal	普通</br>
+>>Hard	困难</br>
+>Impossible	王の不可能完成の任务</br>
+>>Punish	惩罚任务（如果完不成主人给的任务，~~就撅好屁股挨罚吧~~）</br>
+>>>XXX-Punish.yml
+>Pictures 图片资源</br>
+>>Illustrations 二次元插图（虽然不可能有，不要直接传PNG这样的图，真的会被封，请编码成Base64之后传TXT格式，十分感谢各位Hero）</br>
+>>Static 固定UI图片
+# 特别注意
 目录下一切文件名称，分类都为纯英文字符（或拼音）。命名格式遵从XXX（您给起的名字）-Mission(Punish)
 # 任务编写
 遵从YAML语法格式，详细格式如下</br>
