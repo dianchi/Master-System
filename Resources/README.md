@@ -39,16 +39,61 @@ Punish:
 # 对话编写
 请您使用如下格式编写剧情对话</br>
 ```
-Contents: 恭喜你抽到了 {{.Mission}} 的任务，我亲爱的奴隶 {{.Name}}
-Options： #对话选项
-	Option-1: 是的主人
-	Option-2: 去一边去，我不认你做我的主人
-	Option-3: 虽然但是，你是谁
-	...
+Contents: 你好啊我亲爱的奴隶 {{ .Name }} ，从今天开始我就是你的新主人了，你一定有很多问题，不过没关系我们相处的时间还长着呢，我会好好照顾你的 哼哼哼。如果不想被惩罚的话，就乖乖的听我说话，按照我说的做，否则哼哼。
+Options: 
+  Option-1: 
+    Contents: 是的主人
+    Action: 
+      Go: Next
+  Option-2: 
+    Contents: 去一边去，我不认你做我的主人
+    Action: 
+      Go: Punish
+  Option-3: 
+    Contents: 虽然但是，你是谁
+    Action:
+      Go: Dialogue
+      Contents: 我是你亲爱的主人啊，快点向我服从吧
+      Options:
+        Option-1:
+          Contents: 是的，我会服从
+          Action:
+            Go: Next
+        Option-2:
+          Contents: 不，我不会服从
+          Action:
+            Go: Punish
+```
+</br>
+## 进阶版
+```
+Contents: 开始之前，先重新认识一下，他们喜欢叫我"Master System"，但如果你 {{ .Name }} 识相的话应该知道怎么叫我吧 {{ .Mission }} 让我听听你的声音
+Options: 
+  Option-1: 
+    Contents: 是的主人 （需要录音权限）
+    Action: 
+      Go: Recording	#执行操作,参考GO功能表
+      Contents: 主人
+      yes: 
+        Go: Next
+      no: 
+        Go: Dialogue
+        Contents: 哇哦，看来我们的小可爱还是不愿开口呢，看来需要调教一下才行
+        Options: 
+          Option-1: 
+            Contents: （认命，接受惩罚）
+            Action: 
+              Go: Punish
+  Option-2: 
+    Contents: 我不认你做我的主人
+    Action: 
+      Go: Punish
+
 ```
 </br>
 其中 {{.Mission}} 为任务 {{.Name}} 为用户名</br>
 文件为YML文件一条对话占用一个YML文件</br>
 各位笔下留情，不要写太过于暴露（参考已经被封了的Wearable Technology，谁也不希望这个仓库被封⑧）或者太难完成的任务（注意身体）</br>
-#变量表
+# 变量表
 待完善
+# GO功能表
