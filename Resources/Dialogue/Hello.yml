@@ -1,14 +1,14 @@
 Contents: 你好啊我亲爱的奴隶 {{.Name}} ，从今天开始我就是你的新主人了，你一定有很多问题，不过没关系我们相处的时间还长着呢，我会好好照顾你的 哼哼哼。如果不想被惩罚的话，就乖乖的听我说话，按照我说的做，否则哼哼。
 Options:
-	Option-1: 
+ Option-1: 
     Contents: 是的主人
     Action: 
       Go: Next
-	Option-2: 
+ Option-2: 
     Contents: 去一边去，我不认你做我的主人
     Action: 
       Go: Punish
-	Option-3: 
+ Option-3: 
     Contents: 虽然但是，你是谁
     Action:
       Go: Dialogue
