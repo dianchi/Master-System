@@ -17,7 +17,7 @@
 >Pictures 图片资源</br>
 >>Illustrations 二次元插图（虽然不可能有，不要直接传PNG这样的图，真的会被封，请编码成Base64之后传TXT格式，十分感谢各位Hero）</br>
 >>Static 固定UI图片
-#特别注意
+# 特别注意
 目录下一切文件名称，分类都为纯英文字符（或拼音）。命名格式遵从XXX（您给起的名字）-Mission(Punish)
 # 任务编写
 遵从YAML语法格式，详细格式如下</br>
