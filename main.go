@@ -59,7 +59,7 @@ func ReadMission() string {
 	if err := mission.ReadInConfig(); err != nil {
 		fmt.Println(err)
 	}
-	return mission.GetString("Contents")
+	return mission.GetString("Mission.Contents")
 }
 func process(t *template.Template, vars interface{}) string {
 	var tmplBytes bytes.Buffer
