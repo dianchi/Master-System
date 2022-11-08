@@ -1,8 +1,7 @@
-Mission:
-  Categories: Language
-  Describe: 叫我主人吧
-  Contents: 我要你叫我一声"主人"
-  Keywords: 叫"主人"
+Categories: Language
+Describe: 叫我主人吧
+Contents: 我要你叫我一声"主人"
+Keywords: 叫"主人"
 RestTime:
   FixedTime: 0
   DynamicTime: 0
