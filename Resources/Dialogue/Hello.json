@@ -39,6 +39,29 @@
       }
     }
     } 
+},
+{
+  "Option-4": {
+    "Contents": "虽然但是，你是谁",
+    "Action": {
+      "Go": "Dialogue",
+      "Contents": "Test",
+      "Options": {
+        "Option-1": {
+          "Contents": "是的，我会服从",
+          "Action": {
+            "Go": "Next"
+          }
+        },
+        "Option-2": {
+          "Contents": "不，我不会服从",
+          "Action": {
+            "Go": "Punish"
+          }
+        }
+      }
+    }
+    } 
 }
 ]
 }
