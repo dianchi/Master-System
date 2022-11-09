@@ -3,29 +3,34 @@ package src
 import (
 	"fmt"
 	"os"
+	"strconv"
 
 	"github.com/spf13/viper"
+	"github.com/tidwall/gjson"
 )
 
+const path = "."
+
 func ReadDialogue() string {
-	path, err := os.Getwd()
-	if err != nil {
-		fmt.Println(err)
-	}
+	//path, err := os.Getwd()
+	//if err != nil {
+	//	fmt.Println(err)
+	//}
 	dialogue := viper.New()
 	dialogue.AddConfigPath(path + "/Resources/Dialogue")
-	dialogue.SetConfigName("CTM-1")
+	dialogue.SetConfigName("Hello")
 	dialogue.SetConfigType("yaml")
 	if err := dialogue.ReadInConfig(); err != nil {
 		fmt.Println(err)
 	}
 	return dialogue.GetString("Contents")
 }
+
 func ReadMission() string {
-	path, err := os.Getwd()
-	if err != nil {
-		fmt.Println(err)
-	}
+	//path, err := os.Getwd()
+	//if err != nil {
+	//	fmt.Println(err)
+	//}
 	mission := viper.New()
 	mission.AddConfigPath(path + "/Resources/Missions")
 	mission.SetConfigName("CTM-Mission")
@@ -34,4 +39,17 @@ func ReadMission() string {
 		fmt.Println(err)
 	}
 	return mission.GetString("Mission.Contents")
+}
+
+func ReadOptions() []string {
+	var options []string
+	content, err := os.ReadFile(path + "/Resources/Dialogue/Hello.json")
+	if err != nil {
+		fmt.Print(err)
+	}
+	OptionsNum, _ := strconv.Atoi(gjson.Get(string(content), "Options.#").String())
+	for i := 0; i < OptionsNum; i++ {
+		options = append(options, gjson.Get(string(content), "Options."+strconv.Itoa(i)+".Option-"+strconv.Itoa(i+1)+".Contents").String())
+	}
+	return options
 }

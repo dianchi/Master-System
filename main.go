@@ -18,16 +18,19 @@ type Main struct {
 func main() {
 	dialogue := src.ReadDialogue()
 	mission := src.ReadMission()
+	options := src.ReadOptions()
 	b := Main{"Batrycc", mission}
-	Web(ProcessString(dialogue, b))
+	Web(ProcessString(dialogue, b), options)
 }
-func Web(message string) {
+func Web(message string, options []string) {
 	app := iris.New()
 	app.RegisterView(iris.HTML("./views", ".html"))
 	app.Get("/", func(ctx iris.Context) {
 		ctx.ViewData("message", message)
 		ctx.View("hello.html")
-		ctx.HTML("</br>Well 干得不错")
+		for i := 0; i < len(options); i++ {
+			ctx.HTML(options[i] + "</br>")
+		}
 	})
 
 	app.Run(iris.Addr("localhost:8080"))
