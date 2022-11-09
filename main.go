@@ -3,6 +3,7 @@ package main
 import (
 	"bytes"
 	"fmt"
+	"os"
 	"text/template"
 
 	"github.com/dianchi/Master-System/src"
@@ -16,9 +17,13 @@ type Main struct {
 }
 
 func main() {
+	content, err := os.ReadFile("./Resources/Dialogue/Hello.json")
+	if err != nil {
+		fmt.Println(err)
+	}
 	dialogue := src.ReadDialogue()
 	mission := src.ReadMission()
-	options := src.ReadOptions()
+	options := src.ReadOptions(string(content))
 	b := Main{"Batrycc", mission}
 	Web(ProcessString(dialogue, b), options)
 }
