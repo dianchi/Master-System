@@ -43,6 +43,7 @@ func ReadMission() string {
 
 func ReadOptions() []string {
 	var options []string
+	//var checker []string
 	content, err := os.ReadFile(path + "/Resources/Dialogue/Hello.json")
 	if err != nil {
 		fmt.Print(err)
@@ -50,6 +51,8 @@ func ReadOptions() []string {
 	OptionsNum, _ := strconv.Atoi(gjson.Get(string(content), "Options.#").String())
 	for i := 0; i < OptionsNum; i++ {
 		options = append(options, gjson.Get(string(content), "Options."+strconv.Itoa(i)+".Option-"+strconv.Itoa(i+1)+".Contents").String())
+		//checker = append(checker, DialogueChecker(gjson.Get(string(content), "Options."+strconv.Itoa(i)+".Option-"+strconv.Itoa(i+1)).String()))
+
 	}
 	return options
 }
