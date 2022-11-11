@@ -21,4 +21,5 @@ XP is the productivity of everything
 # Special Thanks
 抖喵家 提供的思路</br>
 OpenDGLab DGLab电击设备控制思路</br>
+Asmr.one 提供的音声资源(主要是第一人称機械姦类的)</br>
 自己 带我入坑</br>
